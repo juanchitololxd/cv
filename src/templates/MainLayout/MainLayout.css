@@ -1,0 +1,136 @@
+@import './../../global.css';
+
+.main-container {
+    position: relative;
+    height: 100vh;
+    font-family: var(--primary-font);
+}
+
+.menu-icon, .left-menu .buttons, .left-menu .primary-button{
+    display: none;
+}
+
+.left-menu, .top-menu {
+    background-color: var(--primary-color);
+    top: 0
+}
+
+.left-menu {
+    height: 100vh;
+    width: 50px;
+    position: fixed;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    .buttons {
+        display: flex;
+        flex-direction: column-reverse;
+        > * {
+            margin-inline: auto;
+            margin-bottom: 25px;
+        }
+    }
+
+}
+
+.circle {
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.top-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    position: fixed;
+    width: 100%;
+
+    > a {
+        padding-inline: 20px;
+        transition: background-color 0.3s ease;
+        padding-block: 20px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    > a:hover {
+        cursor: pointer;
+        background-color: gray;
+    }
+}
+
+section {
+    margin-inline: 15%;
+    margin-top: 22vh;
+}
+
+
+@media (max-width: 768px) {
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-menu {
+        height: auto;
+        justify-content: center;
+    }
+
+    .left-menu .primary-button {
+        font-size: 32px;
+        display: block;
+        position: fixed;
+        bottom: 3vh;
+        left: 80vw;
+    }
+
+    .left-menu .buttons {
+        display: none;
+    }
+
+    .left-menu .buttons-show {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        bottom: 15vh; 
+        left: 81vw;
+
+        .icon {
+            margin-block: 10px;
+            margin-left:5px;
+        }
+    }
+
+    .top-menu {
+        background-color: blue;
+        width: 100%;
+        display: block;
+        .menu-icon {
+            display: block;
+            font-size: 30px;
+            padding: 5px;
+            margin-block: auto;
+            }
+
+        > a{
+        display: none;
+        }
+
+        > .menu-item {
+            display: block;
+            width: 100%;
+            padding-block: 10px;
+            padding-inline: 0;
+            margin-right: 15px;
+
+        }    
+    }
+
+    section {
+        margin-inline: 7%;
+    }
+    
+  }
+
+

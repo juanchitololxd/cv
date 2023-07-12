@@ -1,0 +1,16 @@
+@import './../../../global.css';
+
+button {
+    background-color: blue;
+    font-family: var(--primary-font);
+    color: white;
+    border: 0;
+    padding: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}
