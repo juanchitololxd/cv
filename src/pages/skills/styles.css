@@ -1,0 +1,27 @@
+@import url('./../../global.css');
+
+.knowledges {
+    display: grid;
+    grid-template-columns: 30% 70%;
+
+    .general {
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid gray;
+        justify-content: flex-start;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .knowledges {
+        display: flex;
+        flex-direction: column;
+
+        .general {
+            flex-direction: row;
+            border-right: 0;
+            justify-content: center;
+        }
+    }
+}

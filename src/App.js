@@ -1,14 +1,27 @@
 import './App.css';
 import { MainLayout } from './templates/MainLayout/MainLayout'
 import { Presentation } from './pages/presentation/Presentation';
-import { About } from './pages/About/About';
 import React from 'react';
+import { SkillsProvider } from './pages/skills/SkillsContext';
+import { Skills } from './pages/skills/skills';
 function App() {
   return (
     <React.Fragment>
       <MainLayout>
-        <Presentation/>
-        <About></About>
+        <section>
+          <Presentation/>
+        </section>
+        <section id="skills">
+          <SkillsProvider>
+            <Skills/>
+          </SkillsProvider>
+        </section>
+        
+        
+        <div>
+          <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+        </div>
+        
       </MainLayout>
     </React.Fragment>
   );

@@ -1,7 +1,7 @@
 @import './../../global.css';
 
 :root{
-    --size-img: 15vw;
+    --size-img: 16vw;
 }
 
 img {
@@ -9,7 +9,6 @@ img {
     border-radius: 100%;
     width: var(--size-img);
     height: var(--size-img);
-    margin-right: 50px;
 }
 
 .container {
@@ -21,16 +20,30 @@ img {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin-inline: 50px;
 
         .personal {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            margin-bottom: 10px;
+            height: 100%;
 
             > * {
                 margin: 0;
+                
+            }
+
+            > p {
+                font-size: 15px;
+                margin-block: auto;
             }
         }
+    }
+
+
+    .data > :last-child{
+        width: 50%;
     }
 }
 @media (max-width: 768px) {
@@ -38,10 +51,25 @@ img {
         flex-direction: column;
 
         .data {
+            margin-inline: 0;
+            width: 100%;
             .personal {
                 text-align: center;
-                margin-bottom: 15px;
+                margin-block: 40px;
+
+                > * {
+                    margin-block:10px;
+                }
+
+                > p {
+                    text-align: justify;
+                    margin-inline: 5px;
+                }
             }
+        }
+
+        .data> :last-child {
+            width: 100%;
         }
     }
 

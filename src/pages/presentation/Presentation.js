@@ -9,7 +9,8 @@ function Presentation (){
             <div className="data">
                 <div className="personal">
                     <h2>Juan Pablo Fonseca</h2>
-                    <h4>Software Developer</h4>
+                    <h3>Software Developer</h3>
+                    <p>Desarrollador especializado en <strong>aplicaciones web</strong>. Destacado por la puntualidad, perseverancia, disciplina y ser <strong>autodidacta</strong></p>
                 </div>
                 <Button label="Descargar CV"></Button>
             </div>

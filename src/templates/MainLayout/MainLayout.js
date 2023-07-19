@@ -5,6 +5,8 @@ import { SiLinktree } from 'react-icons/si';
 
 import { Icon } from "../../Shared/molecules/Icon/Icon";
 import './MainLayout.css';
+import { SemiButton } from "../../Shared/molecules/SemiButton/SemiButton";
+
 
 
 function MainLayout(props) {
@@ -18,7 +20,7 @@ function MainLayout(props) {
   const handleButtonContactClick = () => {
     setShowContact(!showContact);
   };
-
+  console.log("reder")
   return (
     <div className="main-container">
         <div className="left-menu">
@@ -38,14 +40,13 @@ function MainLayout(props) {
         <div>
             <div className="top-menu">
                 <AiOutlineMenu className="menu-icon icon" onClick={handleMenuClick} />    
-                <a href="#about" className={`${showMenu ? 'menu-item' : ''} `}>Acerca de mi</a>
-                <a href="#skills" className={`${showMenu ? 'menu-item' : ''} `}>Conocimientos</a>
-                <a href="#projects" className={`${showMenu ? 'menu-item' : ''} `}>Proyectos</a>
-                <a href="#experience" className={`${showMenu ? 'menu-item' : ''} `}>Experiencias</a>
+                <SemiButton className={`${showMenu ? 'menu-item' : ''} `} text="Conocimientos" href="#skills"></SemiButton>
+                <SemiButton className={`${showMenu ? 'menu-item' : ''} `} text="Proyectos" href="#projects"></SemiButton>
+                <SemiButton className={`${showMenu ? 'menu-item' : ''} `} text="Experiencia" href="experience"></SemiButton>
+
             </div>
-            <section>
-                {props.children}
-            </section>
+            {props.children}
+            
         </div>
     </div>
   );

@@ -1,0 +1,12 @@
+a {
+    padding-inline: 20px;
+    transition: background-color 0.3s ease;
+    padding-block: 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+a:hover {
+    cursor: pointer;
+    background-color: gray;
+}

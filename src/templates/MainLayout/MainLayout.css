@@ -44,26 +44,7 @@
     margin-right: 20px;
     position: fixed;
     width: 100%;
-
-    > a {
-        padding-inline: 20px;
-        transition: background-color 0.3s ease;
-        padding-block: 20px;
-        text-decoration: none;
-        font-size: 17px;
-    }
-
-    > a:hover {
-        cursor: pointer;
-        background-color: gray;
-    }
 }
-
-section {
-    margin-inline: 15%;
-    margin-top: 22vh;
-}
-
 
 @media (max-width: 768px) {
 
@@ -85,7 +66,7 @@ section {
         left: 80vw;
     }
 
-    .left-menu .buttons {
+    .left-menu .buttons, .desktop-item {
         display: none;
     }
 
@@ -125,10 +106,6 @@ section {
             margin-right: 15px;
 
         }    
-    }
-
-    section {
-        margin-inline: 7%;
     }
     
   }

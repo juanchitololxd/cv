@@ -1,15 +1,15 @@
-.App {
-  text-align: center;
-}
+@import './global.css';
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  margin-inline: 15%;
+  margin-top: 20vh;
+  min-height: 60vh;
+  margin-bottom: 20vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 768px) {
+  section {
+      margin-inline: 7%;
+      overflow-x: hidden;
   }
 }
 
@@ -36,3 +36,4 @@
     transform: rotate(360deg);
   }
 }
+
