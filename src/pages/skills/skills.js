@@ -18,11 +18,11 @@ export function Skills() {
                     )
                     )}
                 </div> 
-                <div>
+                <div className='skills'>
                     {selectedKnowledge?.skills?.map((skill) => (
-                        <span key={skill.name}>
-                            {skill.logo}
-                            {skill.name}
+                        <span key={skill.name} className="icon">
+                            <i>{skill.logo}</i> 
+                            <p>{skill.name}</p>
                         </span>
                     ))} 
                 </div>

@@ -46,7 +46,17 @@
     width: 100%;
 }
 
+.menu-items, .menu-disabled {
+    display: flex;
+    justify-content: flex-end;
+}
+
 @media (max-width: 768px) {
+
+    .blurred{
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 100;
+    }
 
     .main-container {
         display: flex;
@@ -62,7 +72,7 @@
         font-size: 32px;
         display: block;
         position: fixed;
-        bottom: 3vh;
+        bottom: 4vh;
         left: 80vw;
     }
 
@@ -71,11 +81,12 @@
     }
 
     .left-menu .buttons-show {
+        background-color: white;
         position: fixed;
         display: flex;
         flex-direction: column;
         bottom: 15vh; 
-        left: 81vw;
+        left: 75vw;
 
         .icon {
             margin-block: 10px;
@@ -84,7 +95,6 @@
     }
 
     .top-menu {
-        background-color: blue;
         width: 100%;
         display: block;
         .menu-icon {
@@ -94,12 +104,13 @@
             margin-block: auto;
             }
 
-        > a{
-        display: none;
+        .menu-disabled{
+            display: none;
         }
 
-        > .menu-item {
-            display: block;
+        .menu-items {
+            display: flex;
+            flex-direction: column;
             width: 100%;
             padding-block: 10px;
             padding-inline: 0;

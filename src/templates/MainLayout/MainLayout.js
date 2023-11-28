@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { AiOutlineLinkedin, AiOutlineMenu, AiOutlineEllipsis } from 'react-icons/ai';
-import { TbMessageCircle2Filled } from 'react-icons/tb';
+import { AiOutlineLinkedin, AiOutlineMenu, AiOutlineEllipsis, AiOutlineMessage } from 'react-icons/ai';
 import { SiLinktree } from 'react-icons/si';
 
 import { Icon } from "../../Shared/molecules/Icon/Icon";
@@ -19,10 +18,12 @@ function MainLayout(props) {
 
   const handleButtonContactClick = () => {
     setShowContact(!showContact);
+      if (!showContact) document.body.classList.add('blurred')
+      else document.body.classList.remove('blurred')
+    
   };
-  console.log("reder")
   return (
-    <div className="main-container">
+    <div id="container" className="main-container">
         <div className="left-menu">
             <AiOutlineEllipsis className="primary-button icon circle" onClick={handleButtonContactClick}/>
             <div className={showContact ? 'buttons-show': 'buttons'}>
@@ -30,7 +31,7 @@ function MainLayout(props) {
                     <AiOutlineLinkedin/>
                 </Icon>
                 <Icon url={`mailto:juanpablofonsecac5@gmail.com?subject=${encodeURIComponent('Contratación')}`}>
-                    <TbMessageCircle2Filled/>
+                    <AiOutlineMessage/>
                 </Icon>
                 <Icon url="https://linktr.ee/eltiojuanchito">
                     <SiLinktree/>
@@ -40,9 +41,12 @@ function MainLayout(props) {
         <div>
             <div className="top-menu">
                 <AiOutlineMenu className="menu-icon icon" onClick={handleMenuClick} />    
-                <SemiButton className={`${showMenu ? 'menu-item' : ''} `} text="Conocimientos" href="#skills"></SemiButton>
-                <SemiButton className={`${showMenu ? 'menu-item' : ''} `} text="Proyectos" href="#projects"></SemiButton>
-                <SemiButton className={`${showMenu ? 'menu-item' : ''} `} text="Experiencia" href="experience"></SemiButton>
+                <div className={`${!!showMenu ? 'menu-items' : 'menu-disabled'}`}>
+                  <SemiButton text="Conocimientos" href="#skills" onClick={handleMenuClick}></SemiButton>
+                  <SemiButton text="Proyectos" href="#projects" onClick={handleMenuClick}></SemiButton>
+                  <SemiButton text="Experiencia" href="#experience" onClick={handleMenuClick}></SemiButton>
+                </div>
+
 
             </div>
             {props.children}
